@@ -1,0 +1,88 @@
+.hero
+  position: relative
+  padding: 50px 0 155px 0
+  background: linear-gradient(180deg, #12154B 0.01%, #090F1A 95.44%)
+  z-index: 1
+  &-header
+    padding-bottom: 104px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__social
+      &-list
+        padding: 0
+        margin: 0
+        width: 135px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        list-style: none
+      &-item
+        width: 19px
+        height: 19px
+        transition: all 0.5s ease
+        &:hover
+          transform: scale(1.5)
+        &_vk
+          width: 22px
+          height: 22px
+      &-link
+        color: $text-color
+        transition: all 0.5s ease
+        &:hover
+          color: $primary
+          transition: all 0.5s ease
+  &-info
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__devloper
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      &-subtitle
+        font-style: normal
+        font-weight: normal
+        font-size: 24px
+        line-height: 28px
+        color: $primary
+      &-title
+        margin-top: 14px
+        margin-bottom: 20px
+        font-style: normal
+        font-weight: bold
+        font-size: 50px
+        line-height: 59px
+        color: $text-color
+      &-description
+        margin-top: 0
+        margin-bottom: 38px
+        max-width: 420px
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 28px
+        color: $text-color
+    &__avatar
+      position: relative
+      width: 367px
+      height: 367px
+      background: url(../img/avatar.jpg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      border-radius: 50%
+      &::after
+        position: absolute
+        top: -11px
+        left: -11px
+        content: ''
+        width: 389px
+        height: 389px
+        background: linear-gradient(180deg, $primary 0.01%, $text-color 95.44%)
+        border-radius: 50%
+        z-index: -1
+    &__button
+      padding: 24px 41px
+      max-width: 285px
+      
