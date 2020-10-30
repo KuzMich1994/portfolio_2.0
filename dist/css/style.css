@@ -402,24 +402,114 @@ img {
 }
 
 .button {
-  background-color: #F42B2B;
-  -webkit-box-shadow: 0px 4px 0px #CF0808;
-          box-shadow: 0px 4px 0px #CF0808;
-  border-radius: 5px 5px 10px 10px;
-  color: #ffffff;
+  position: relative;
+  color: #F42B2B;
+  background-color: transparent;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
-  outline: none;
-  -webkit-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .button:hover {
-  background-color: #ffffff;
-  color: #F42B2B;
-  -webkit-box-shadow: 0px 4px 0px #FF5F5F;
-          box-shadow: 0px 4px 0px #FF5F5F;
+  -webkit-box-shadow: 0 0 10px #F42B2B, 0 0 30px #F42B2B, 0 0 80px #F42B2B;
+          box-shadow: 0 0 10px #F42B2B, 0 0 30px #F42B2B, 0 0 80px #F42B2B;
+  background-color: #F42B2B;
+  color: #ffffff;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.button__line {
+  position: absolute;
+  display: block;
+}
+
+.button__line_top {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#F42B2B));
+  background: -o-linear-gradient(left, transparent, #F42B2B);
+  background: linear-gradient(90deg, transparent, #F42B2B);
+}
+
+.button__line_bottom {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#F42B2B));
+  background: -o-linear-gradient(right, transparent, #F42B2B);
+  background: linear-gradient(270deg, transparent, #F42B2B);
+}
+
+.button__line_left {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#F42B2B));
+  background: -o-linear-gradient(bottom, transparent, #F42B2B);
+  background: linear-gradient(0deg, transparent, #F42B2B);
+}
+
+.button__line_right {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#F42B2B));
+  background: -o-linear-gradient(top, transparent, #F42B2B);
+  background: linear-gradient(180deg, transparent, #F42B2B);
+}
+
+.button:hover .button__line_top {
+  left: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.25s;
+       -o-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.button:hover .button__line_bottom {
+  right: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.25s;
+       -o-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.button:hover .button__line_left {
+  bottom: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.button:hover .button__line_right {
+  top: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .button__text {
